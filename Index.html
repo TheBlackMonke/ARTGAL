@@ -8,8 +8,8 @@
 </head>
 <body>
     <header>
-        <div class="logo">Gallery Showcase</div>
-        <nav>
+        <div class="logo" aria-label="Gallery Showcase">Gallery Showcase</div>
+        <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about">About</a></li>
@@ -19,41 +19,31 @@
     </header>
 
     <main>
-        <section id="gallery">
-            <h1>Image Gallery</h1>
+        <section id="gallery" aria-labelledby="gallery-title">
+            <h1 id="gallery-title">Image Gallery</h1>
             <div class="gallery-container">
-                <div class="gallery-item">
+                <figure class="gallery-item">
                     <img src="image1.jpg" alt="Description of Image 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="image2.jpg" alt="Description of Image 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="image3.jpg" alt="Description of Image 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="image4.jpg" alt="Description of Image 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="image5.jpg" alt="Description of Image 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="image6.jpg" alt="Description of Image 6">
-                </div>
+                    <figcaption>Image 1</figcaption>
+                </figure>
+                <!-- Repeat for other images -->
             </div>
         </section>
 
-        <section id="about">
-            <h2>About Us</h2>
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About Us</h2>
             <p>Welcome to our gallery! Here you can explore a collection of beautiful art.</p>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Us</h2>
+            <form autocomplete="on">
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" placeholder="Your Name" required>
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" placeholder="Your Email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
@@ -61,10 +51,10 @@
 
     <footer>
         <p>&copy; 2025 Gallery Showcase. All rights reserved.</p>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-        </div>
+        <nav class="social-media" aria-label="Social Media">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+        </nav>
     </footer>
 
     <script src="script.js"></script>
